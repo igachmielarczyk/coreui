@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<!--
+* CoreUI - Free Bootstrap Admin Template
+* @version v4.0.0-alpha.2
+* @link https://coreui.io
+* Copyright (c) 2021 creativeLabs Łukasz Holeczek
+* Licensed under MIT (https://coreui.io/license)
+-->
+<html lang="en">
+  <head>
+    <base href="./">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+    <meta name="author" content="Łukasz Holeczek">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <title>CoreUI Free Bootstrap Admin Template</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Main styles for this application-->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics-->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      // Shared ID
+      gtag('config', 'UA-118965717-3');
+      // Bootstrap ID
+      gtag('config', 'UA-118965717-5');
+    </script>
+    <link href="vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
+    <!-- Iga Added -->
+    <link rel="stylesheet" href="https://unpkg.com/@coreui/icons/css/all.min.css">
+  </head>
+  <body>
+    <div class="sidebar sidebar-dark sidebar-fixed sidebar-self-hiding-md" id="sidebar">
+      <ul class="sidebar-nav pt-5" data-coreui="navigation">
+        <li class="nav-item pt-3">
+          <a class="nav-link" href="#">
+            <!--<svg class="nav-icon">
+              <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-speedometer"></use>
+            </svg> to svg dodać do każdego z listy jaky jednak icon byly zle -->
+            <i class="nav-icon cil-airplay"></i><span class="mx-3"> Pulpit</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="nav-icon cil-factory"></i><span class="mx-3"> Firmy</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="nav-icon cil-calendar"></i><span class="mx-3"> Kalendarz</span>
+          </a>
+        </li>
+        <li class="nav-divider"></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="nav-icon cil-command"></i><span class="mx-3"> Produkty</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="nav-icon cil-folder"></i><span class="mx-3"> Makiety</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="cil-drop nav-icon"></i><span class="mx-3"> Skład</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="cil-diamond nav-icon"></i><span class="mx-3"> Branże</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="cil-phone nav-icon"></i><span class="mx-3"> Dzwoń</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="cil-airplane-mode nav-icon"></i><span class="mx-3"> Eksport</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="cil-locomotive nav-icon"></i><span class="mx-3"> Import</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="cil-envelope-closed nav-icon"></i><span class="mx-3"> Poczta</span>
+          </a>
+        </li>
+      </ul>
+      <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
+    </div>
+    <div class="wrapper d-flex flex-column min-vh-100">
+      <header class="header header-sticky mb-4">
+        <div class="container-fluid">
+          <button class="header-toggler order-sm-first px-md-0 me-md-3" type="button" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
+            <i class="nav-icon cil-hamburger-menu mx-2"></i>
+          </button>
+          <ul class="header-nav d-md-down-none ">
+            <li class="nav-item"><a class="nav-link" href="#">Łukasz Kaczmarek</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">(NR: 650)</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Data</a></li>
+          </ul>
+          <ul class="header-nav ms-sm-auto">
+            <li class="nav-item d-md-down-none">
+              <button type="button" class="btn btn-block btn-success text-white">Dodaj nową firmę </button>
+            </li>
+            <li class="nav-item d-md-down-none">
+              <button type="button" class="btn btn-block btn-danger text-white">Wyloguj się </button>
+            </li>
+          </ul>
+
+        </div>
+      </header>
+
+      <div class="pb-4">
+        <div class="nav-tabs-boxed nav-tabs-boxed-top-right">
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-coreui-toggle="tab" href="#firm-name1" role="tab" aria-controls="firm-name1">
+                <i class="cil-check-circle text-success"></i><span class="mx-2">Firma</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-coreui-toggle="tab" href="#firm-name2" role="tab" aria-controls="firm-name2">Firma 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-coreui-toggle="tab" href="#firm-name3" role="tab" aria-controls="firm-name3">Firma 3</a>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-content">
+          <div class="tab-pane active" id="firm-name1" role="tabpanel">
+            <div class="headers-button-section p-2">
+              <button type="button" class="btn btn-block btn-info text-white mx-1 my-2">Eytuj firmę</button>
+              <button type="button" class="btn btn-block btn-info text-white mx-1 my-2">Dodaj nowy wpis</button>
+              <button type="button" class="btn btn-block btn-danger text-white mx-1 my-2">Zgłoś do usunięcia</button>
+              <button type="button" class="btn btn-block btn-info text-white mx-1 my-2">Połącz</button>
+            </div>
+            <div class="info-panel p-3 container">
+              <div class="row">
+                <div class="col-md-8">
+                  <h1>BRUNO BHP&amp;PPOŻ Teofil Jarosz</h1>
+                  <div class="firm-info ">
+                    <ul class="list-unstyled">
+                      <li><strong>Opiekun Firmy:</strong></li>
+                      <li><strong>NIP</strong></li>
+                      <br>
+                      <li><i class="icon icon-xl cil-print"></i><span class="mx-4">Adres</span></li>
+                      <li><i class="icon icon-xl cil-envelope-closed "></i><span class="mx-4">Adres korespondencyjny</span></li>
+                      <br>
+                      <li><i class="icon icon-xl cil-user"></i><span class="mx-4">Właściciel</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="main-info col-md-4 bg-white h-50 p-3">
+                  <h4>Ważne informacje<span class="fs-6 fw-light mx-3"><a class="edit-link" href="">Edytuj</a></span></h4>
+                  <p>w sprawie projektu z p.Grzegorzem Jarosz w sprawach projektu: 500 280 077</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="firm-name2" role="tabpanel">
+            2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+          <div class="tab-pane" id="firm-name3" role="tabpanel">
+            3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+      </div>
+
+      <div class="card-lit col-12">
+        <ul class="nav nav-tabs" id="myTab1" role="tablist">
+          <li class="nav-item"><a class="nav-link active" id="data-company-tab" data-coreui-toggle="tab" href="#data-company" role="tab" aria-controls="home" aria-selected="true">Dane Firmy</a></li>
+          <li class="nav-item"><a class="nav-link" id="products-tab" data-coreui-toggle="tab" href="#products" role="tab" aria-controls="products" aria-selected="false">Produkty</a></li>
+        </ul>
+        <div class="tab-content" id="myTab1Content">
+          <div class="tab-pane fade show active" id="data-company" role="tabpanel" aria-labelledby="data-company-tab">
+            <div class="container">
+              <div class="row">
+                <div class="list col-6 col-md-8">
+                  <ul class="list-unstyled">
+                    <li class="mt-3">
+                      <span><i class="cil-check-circle text-success"></i></span>
+                      <h4 class="d-inline mx-3">BRUNO BHP</h4>
+                      <p class="py-3 m-0">Odzież ochronna, obuwie robocze </p>
+                      <p class="font-size-075 fw-bold text-uppercase text-muted py-0 ">lit brzeg 2021 (M3-BRUNO BHP&amp;POPŻ)</p>
+                      <button type="button" class="btn btn-info text-white">Edytuj logo</button>
+                      <button type="button" class="btn btn-info text-white">Ustaw jako główny</button>
+                      <button type="button" class="btn btn-info text-white">Edytuj</button>
+                      <button type="button" class="btn btn-info text-white">Do składu</button>
+                      <button type="button" class="btn btn-danger text-white">Usuń</button>
+                      <hr>
+                    </li>
+                    <li class="mt-3">
+                      <span><i class="cil-check-circle text-success"></i></span>
+                      <h4 class="d-inline mx-3">BRUNO BHP</h4>
+                      <p class="py-3 m-0">Odzież ochronna, obuwie robocze </p>
+                      <p class="font-size-075 fw-bold text-uppercase text-muted py-0 ">lit brzeg 2021 (M3-BRUNO BHP&amp;POPŻ)</p>
+                      <button type="button" class="btn btn-info text-white">Edytuj logo</button>
+                      <button type="button" class="btn btn-info text-white">Ustaw jako główny</button>
+                      <button type="button" class="btn btn-info text-white">Edytuj</button>
+                      <button type="button" class="btn btn-info text-white">Do składu</button>
+                      <button type="button" class="btn btn-danger text-white">Usuń</button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6 col-md-4">
+                  <div class="card-body">
+                    <table class="table table-responsive-sm table-striped">
+                      <thead>
+                        <tr>
+                          <th colspan="2" class="text-center"><button type="button" class="btn btn-secondary">Dodaj zadnie</button></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>LIT NAMYSŁÓW 2021</td>
+                          <td>LITNM21 M3</td>
+                        </tr>
+                        <tr>
+                          <td>LIT NAMYSŁÓW 2021</td>
+                          <td>LITNM21 M3</td>
+                        </tr>
+                        <tr>
+                          <td>LIT NAMYSŁÓW 2021</td>
+                          <td>LITNM21 M3</td>
+                        </tr>
+                        <tr>
+                          <td>LIT NAMYSŁÓW 2021</td>
+                          <td>LITNM21 M3</td>
+                        </tr>
+                        <tr>
+                          <td>LIT NAMYSŁÓW 2021</td>
+                          <td>LITNM21 M3</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="products" role="tabpanel" aria-labelledby="products-tab">
+            <div class="card container">
+              <div class="row col-12">
+                <div class="card-header mt-3">
+                  <h2>Lista zamówień</h2>
+                  <button class="btn btn-sm btn-info text-white my-2" type="button">Dodaj nowy produkt</button>
+                </div>
+                <div class="card-body table-responsive">
+                  <table class="table table-responsive table-relative table-striped">
+                    <thead class="sticky-top ">
+                      <tr class="table-sticky">
+                        <th></th>
+                        <th></th>
+                        <th>Rata</th>
+                        <th>Dni</th>
+                        <th>Faktura</th>
+                        <th>Data wykonania</th>
+                        <th>FV z dnia</th>
+                        <th>Netto</th>
+                        <th>Brutto</th>
+                        <th>Zalega Brutto</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td colspan="10">produkt1, (#17 dodane w dniu przez)</td>
+                        <td>
+                          <button class="btn btn-md btn-info btn-icon-show text-white fw-bold mx-1" type="button"><i class="cil-zoom"></i></button>
+                          <button class="btn btn-md btn-success btn-icon-edit text-white fw-bold mx-1" type="button"><i class="cil-pencil"></i></button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#Num</td>
+                        <td>ADMIN</td>
+                        <td>0</td>
+                        <td>7/2021</td>
+                        <td>2012/02/01</td>
+                        <td>2012/02/01</td>
+                        <td>0,17 zł</td>
+                        <td>0,21 zł</td>
+                        <td>0,00 zł</td>
+                        <td>0,00 zł</td>
+                        <td>
+                          <button class="btn btn-sm btn-outline-success btn-hover-white btn-icon-description mx-1" type="button"><i class="cil-description"></i></button>
+                          <button class="btn btn-sm btn-outline-info btn-icon-money mx-1" type="button" data-coreui-toggle="collapse" data-coreui-target="#collapseTable1" aria-expanded="false" aria-controls="collapseTable1"><i class="cil-money"></i></button>
+                        </td>
+                      </tr>
+                      <tr class="collapse" id="collapseTable1">
+                        <td colspan="3">Kwota rozliczenia:</td>
+                        <td colspan="3">Data</td>
+                        <td colspan="3">Komentarz</td>
+                        <td><button class="btn btn-sm btn-outline-warning btn-hover-white font-size-075  fw-bold mx-1" type="button">Opłać</button></td>
+                      </tr>
+
+
+                      <tr>
+                        <td>#Num</td>
+                        <td>ADMIN</td>
+                        <td>0</td>
+                        <td>7/2021</td>
+                        <td>2012/02/01</td>
+                        <td>2012/02/01</td>
+                        <td>0,17 zł</td>
+                        <td>0,21 zł</td>
+                        <td>0,00 zł</td>
+                        <td>0,00 zł</td>
+                        <td>
+                          <button class="btn btn-sm btn-outline-info btn-hover-white font-size-075  fw-bold mx-1" type="button" data-coreui-toggle="collapse" data-coreui-target="#collapseTable2" aria-expanded="false" aria-controls="collapseTable2">Rozlicz</button>
+                          <button class="btn btn-sm btn-outline-success btn-hover-white font-size-075 fw-bold mx-1" type="button">Faktura</button>
+                        </td>
+                      </tr>
+                      <tr class="collapse" id="collapseTable2">
+                        <td colspan="3">Kwota rozliczenia:</td>
+                        <td colspan="3">Data</td>
+                        <td colspan="3">Komentarz</td>
+                        <td><button class="btn btn-sm btn-outline-warning btn-hover-white font-size-075  fw-bold mx-1" type="button">Opłać</button></td>
+                      </tr>
+
+
+                      <tr>
+                        <td>#Num</td>
+                        <td>ADMIN</td>
+                        <td>0</td>
+                        <td>7/2021</td>
+                        <td>2012/02/01</td>
+                        <td>2012/02/01</td>
+                        <td>0,17 zł</td>
+                        <td>0,21 zł</td>
+                        <td>0,00 zł</td>
+                        <td>0,00 zł</td>
+                        <td>
+                          <button class="btn btn-sm btn-outline-info btn-hover-white font-size-075  fw-bold mx-1" type="button" data-coreui-toggle="collapse" data-coreui-target="#collapseTable3" aria-expanded="false" aria-controls="collapseTable3">Rozlicz</button>
+                          <button class="btn btn-sm btn-outline-success btn-hover-white font-size-075 fw-bold mx-1" type="button">Faktura</button>
+                        </td>
+                      </tr>
+                      <tr class="collapse" id="collapseTable3">
+                        <td colspan="3">Kwota rozliczenia:</td>
+                        <td colspan="3">Data</td>
+                        <td colspan="3">Komentarz</td>
+                        <td><button class="btn btn-sm btn-outline-warning btn-hover-white font-size-075  fw-bold mx-1" type="button">Opłać</button></td>
+                      </tr>
+
+
+                      <tr>
+                        <td>#Num</td>
+                        <td>ADMIN</td>
+                        <td>0</td>
+                        <td>7/2021</td>
+                        <td>2012/02/01</td>
+                        <td>2012/02/01</td>
+                        <td>0,17 zł</td>
+                        <td>0,21 zł</td>
+                        <td>0,00 zł</td>
+                        <td>0,00 zł</td>
+                        <td>
+                          <button class="btn btn-sm btn-outline-info btn-hover-white font-size-075  fw-bold mx-1" type="button" data-coreui-toggle="collapse" data-coreui-target="#collapseTable4" aria-expanded="false" aria-controls="collapseTable4">Rozlicz</button>
+                          <button class="btn btn-sm btn-outline-success btn-hover-white font-size-075 fw-bold mx-1" type="button">Faktura</button>
+                        </td>
+                      </tr>
+                      <tr class="collapse" id="collapseTable4">
+                        <td colspan="3">Kwota rozliczenia:</td>
+                        <td colspan="3">Data</td>
+                        <td colspan="3">Komentarz</td>
+                        <td><button class="btn btn-sm btn-outline-warning btn-hover-white font-size-075  fw-bold mx-1" type="button">Opłać</button></td>
+                      </tr>
+
+
+                      <tr>
+                        <td>#Num</td>
+                        <td>ADMIN</td>
+                        <td>0</td>
+                        <td>7/2021</td>
+                        <td>2012/02/01</td>
+                        <td>2012/02/01</td>
+                        <td>0,17 zł</td>
+                        <td>0,21 zł</td>
+                        <td>0,00 zł</td>
+                        <td>0,00 zł</td>
+                        <td>
+                          <button class="btn btn-sm btn-outline-info btn-hover-white font-size-075  fw-bold mx-1" type="button" data-coreui-toggle="collapse" data-coreui-target="#collapseTable5" aria-expanded="false" aria-controls="collapseTable5">Rozlicz</button>
+                          <button class="btn btn-sm btn-outline-success btn-hover-white font-size-075 fw-bold mx-1" type="button">Faktura</button>
+                        </td>
+                      </tr>
+                      <tr class="collapse" id="collapseTable5">
+                        <td colspan="3">Kwota rozliczenia:</td>
+                        <td colspan="3">Data</td>
+                        <td colspan="3">Komentarz</td>
+                        <td><button class="btn btn-sm btn-outline-warning btn-hover-white font-size-075  fw-bold mx-1" type="button">Opłać</button></td>
+                      </tr>
+
+
+                      <tr>
+                        <td>#Num</td>
+                        <td>ADMIN</td>
+                        <td>0</td>
+                        <td>7/2021</td>
+                        <td>2012/02/01</td>
+                        <td>2012/02/01</td>
+                        <td>0,17 zł</td>
+                        <td>0,21 zł</td>
+                        <td>0,00 zł</td>
+                        <td>0,00 zł</td>
+                        <td>
+                          <button class="btn btn-sm btn-outline-info btn-hover-white font-size-075  fw-bold mx-1" type="button" data-coreui-toggle="collapse" data-coreui-target="#collapseTable6" aria-expanded="false" aria-controls="collapseTable6">Rozlicz</button>
+                          <button class="btn btn-sm btn-outline-success btn-hover-white font-size-075 fw-bold mx-1" type="button">Faktura</button>
+                        </td>
+                      </tr>
+                      <tr class="collapse" id="collapseTable6">
+                        <td colspan="3">Kwota rozliczenia:</td>
+                        <td colspan="3">Data</td>
+                        <td colspan="3">Komentarz</td>
+                        <td><button class="btn btn-sm btn-outline-warning btn-hover-white font-size-075  fw-bold mx-1" type="button">Opłać</button></td>
+                      </tr>
+
+
+                      <tr>
+                        <td>#Num</td>
+                        <td>ADMIN</td>
+                        <td>0</td>
+                        <td>7/2021</td>
+                        <td>2012/02/01</td>
+                        <td>2012/02/01</td>
+                        <td>0,17 zł</td>
+                        <td>0,21 zł</td>
+                        <td>0,00 zł</td>
+                        <td>0,00 zł</td>
+                        <td>
+                          <button class="btn btn-sm btn-outline-info btn-hover-white font-size-075  fw-bold mx-1" type="button" data-coreui-toggle="collapse" data-coreui-target="#collapseTable7" aria-expanded="false" aria-controls="collapseTable7">Rozlicz</button>
+                          <button class="btn btn-sm btn-outline-success btn-hover-white font-size-075 fw-bold mx-1" type="button">Faktura</button>
+                        </td>
+                      </tr>
+                      <tr class="collapse" id="collapseTable7">
+                        <td colspan="3">Kwota rozliczenia:</td>
+                        <td colspan="3">Data</td>
+                        <td colspan="3">Komentarz</td>
+                        <td><button class="btn btn-sm btn-outline-warning btn-hover-white font-size-075  fw-bold mx-1" type="button">Opłać</button></td>
+                      </tr>
+
+
+                      <tr>
+                        <td>#Num</td>
+                        <td>ADMIN</td>
+                        <td>0</td>
+                        <td>7/2021</td>
+                        <td>2012/02/01</td>
+                        <td>2012/02/01</td>
+                        <td>0,17 zł</td>
+                        <td>0,21 zł</td>
+                        <td>0,00 zł</td>
+                        <td>0,00 zł</td>
+                        <td>
+                          <button class="btn btn-sm btn-outline-info btn-hover-white font-size-075  fw-bold mx-1" type="button" data-coreui-toggle="collapse" data-coreui-target="#collapseTable8" aria-expanded="false" aria-controls="collapseTable8">Rozlicz</button>
+                          <button class="btn btn-sm btn-outline-success btn-hover-white font-size-075 fw-bold mx-1" type="button">Faktura</button>
+                        </td>
+                      </tr>
+                      <tr class="collapse" id="collapseTable8">
+                        <td colspan="3">Kwota rozliczenia:</td>
+                        <td colspan="3">Data</td>
+                        <td colspan="3">Komentarz</td>
+                        <td><button class="btn btn-sm btn-outline-warning btn-hover-white font-size-075  fw-bold mx-1" type="button">Opłać</button></td>
+                      </tr>
+
+
+                      <tr>
+                        <td>#Num</td>
+                        <td>ADMIN</td>
+                        <td>0</td>
+                        <td>7/2021</td>
+                        <td>2012/02/01</td>
+                        <td>2012/02/01</td>
+                        <td>0,17 zł</td>
+                        <td>0,21 zł</td>
+                        <td>0,00 zł</td>
+                        <td>0,00 zł</td>
+                        <td>
+                          <button class="btn btn-sm btn-outline-info btn-hover-white font-size-075  fw-bold mx-1" type="button" data-coreui-toggle="collapse" data-coreui-target="#collapseTable9" aria-expanded="false" aria-controls="collapseTable9">Rozlicz</button>
+                          <button class="btn btn-sm btn-outline-success btn-hover-white font-size-075 fw-bold mx-1" type="button">Faktura</button>
+                        </td>
+                      </tr>
+                      <tr class="collapse" id="collapseTable9">
+                        <td colspan="3">Kwota rozliczenia:</td>
+                        <td colspan="3">Data</td>
+                        <td colspan="3">Komentarz</td>
+                        <td><button class="btn btn-sm btn-outline-warning btn-hover-white font-size-075  fw-bold mx-1" type="button">Opłać</button></td>
+                      </tr>
+
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- CoreUI and necessary plugins-->
+    <script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
+    <!-- Plugins and scripts required by this view-->
+    <script src="vendors/@coreui/chartjs/js/coreui-chartjs.bundle.js"></script>
+    <script src="vendors/@coreui/utils/js/coreui-utils.js"></script>
+    <script src="js/main.js"></script>
+
+
+  </body>
+</html>
